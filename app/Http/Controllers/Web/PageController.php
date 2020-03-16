@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Web;
 
 use App\Group;
 use App\GroupResearcher;
+use App\GroupUnit;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Project;
 use App\Researcher;
+use App\Unit;
 use App\User;
 
 class PageController extends Controller
@@ -38,5 +40,12 @@ class PageController extends Controller
         $users = User::all();
 
         return view('web.researchers',compact('researchers','groups','groups_researchers','users'));
+    }
+
+    public function administrarGrupos(){
+        $groups=Group::orderBy('id','DESC')->paginate(3);
+        $groupsUnits = GroupUnit::all();
+        $units = Unit::all();
+        return view('web.administrarGrupos',compact('groups','groupsUnits','units'));
     }
 }

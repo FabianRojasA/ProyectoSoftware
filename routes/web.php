@@ -19,4 +19,5 @@ Auth::routes();
 Route::get('projects', 'Web\PageController@projects')->name('projects'); 
 Route::get('researchers', 'Web\PageController@researchers')->name('researchers');
 Route::get('researchersP/{id}', 'Web\PageController@researchersP')->name('researchersP');
-
+Route::get('administrarGrupos','Web\PageController@administrarGrupos')->name('administrarGrupos');
+Route::resource('groups','GroupController');

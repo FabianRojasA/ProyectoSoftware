@@ -47,6 +47,7 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                             <li><a href="{{ route('projects') }}">Ver Proyectos</a></li>
                             <li><a href="{{ route('researchers') }}">Ver Investigadores</a></li>
+                            <li><a href="{{ route('administrarGrupos') }}">Administrar Grupos</a></li>
                         @else
                             <li><a href="{{ route('projects') }}">Ver Proyectos</a></li>
                             <li><a href="{{ route('researchers') }}">Ver Investigadores</a></li>
