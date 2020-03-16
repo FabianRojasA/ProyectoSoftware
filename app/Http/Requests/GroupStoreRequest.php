@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GroupRequest extends FormRequest
+class GroupStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class GroupRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -23,12 +23,8 @@ class GroupRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
-            'nombre' => 'required'
+        return [
+            //
         ];
-        if($this->get('file')){
-            $rules = array_merge($rules, ['logo' => 'mimes:jpg,jpeg,png']);
-        }
-        return $rules;
     }
 }

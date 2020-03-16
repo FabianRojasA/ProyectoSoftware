@@ -8,10 +8,10 @@
 
         <h2>
             Editar grupo
-            <td><a href="{{route('groups.index')}}" class="btn btn-default float-right">Listado</a>
+            <td><a href="{{route('administrarGrupos')}}" class="btn btn-default float-right">Listado</a>
         </h2>
         @include('groups.fragment.error')
-        {!! Form::model($group, ['route'=> ['groups.update', $group->id], 'method' => 'PUT'])!!}
+        {!! Form::model($group, ['route'=> ['groups.update', $group->id], 'method' => 'PUT','files' => true])!!}
         @include('groups.fragment.form')
         {!! Form::close() !!}
     </div>

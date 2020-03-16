@@ -17,7 +17,7 @@
             <div class="panel-body">
                 @include('groups.fragment.error')
 
-                {!! Form::open( ['route'=> 'groups.store'])!!}
+                {!! Form::open( ['route'=> 'groups.store','files' => true])!!}
                 @include('groups.fragment.form')
                 {!! Form::close() !!}
             </div>
